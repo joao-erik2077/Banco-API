@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.Objects;
 
@@ -17,7 +18,7 @@ public class ContasPagar {
   @ManyToOne
   @JoinColumn(name = "idcliente")
   private Cliente cliente;
-  private Date data;
-  private Date datavencimento;
+  private LocalDate data;
+  private LocalDate datavencimento;
   private BigDecimal valor;
 }
