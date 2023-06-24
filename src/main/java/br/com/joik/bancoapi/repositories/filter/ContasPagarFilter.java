@@ -1,11 +1,11 @@
 package br.com.joik.bancoapi.repositories.filter;
 
-import lombok.Data;
+import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-@Data
+@Getter
 public class ContasPagarFilter {
   private LocalDate data;
   private LocalDate datavencimento;

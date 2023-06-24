@@ -1,8 +1,8 @@
 package br.com.joik.bancoapi.repositories.filter;
 
-import lombok.Data;
+import lombok.Getter;
 
-@Data
+@Getter
 public class ClienteFilter {
   private String nome;
 }
