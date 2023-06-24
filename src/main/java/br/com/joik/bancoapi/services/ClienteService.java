@@ -2,7 +2,10 @@ package br.com.joik.bancoapi.services;
 
 import br.com.joik.bancoapi.models.Cliente;
 import br.com.joik.bancoapi.repositories.ClienteRepository;
+import br.com.joik.bancoapi.repositories.filter.ClienteFilter;
 import lombok.AllArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -25,5 +28,9 @@ public class ClienteService {
       return ResponseEntity.ok(cliente);
     }
     return ResponseEntity.notFound().build();
+  }
+
+  public Page<Cliente> filtrar(ClienteFilter clienteFilter, Pageable pageable) {
+    return clienteRepository.filtrar(clienteFilter, pageable);
   }
 }
